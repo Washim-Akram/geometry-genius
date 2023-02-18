@@ -15,7 +15,7 @@ function randomColor() {
   }
 
   // Individual background color generate on mouse enter.
-const cardList = document.querySelectorAll(".card");
+const cardList = document.querySelectorAll(".card-bg");
 for(const card of cardList) {
     card.addEventListener('mouseenter', function(event) {
         event.target.style.backgroundColor = randomColor();
@@ -38,10 +38,10 @@ function getInputFieldValueById(inputFieldId) {
 //     return textFieldValue;
 // }
 
-function setTextFieldValueById(textFieldId, value) {
-    const textField = document.getElementById(textFieldId);
-    textField.innerText = value;
-}
+// function setTextFieldValueById(textFieldId, value) {
+//     const textField = document.getElementById(textFieldId);
+//     textField.innerText = value;
+// }
 
 // function handleInputError(inputFieldValue) {
 //     if( typeof inputFieldValue !== "number"){
