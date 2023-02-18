@@ -2,34 +2,16 @@
 document.getElementById("btn-triangle").addEventListener("click", function(){
     //Get triangle base input field value
     const triangleBaseInputFieldValue = getInputFieldValueById("triangle-base-input-field");
-    // handleInputError(triangleBaseInputFieldValue);
+    handleInputError(triangleBaseInputFieldValue);
 
     // Get triangle height input field value
     const triangleHeightInputFieldValue = getInputFieldValueById("triangle-height-input-field");
-    // handleInputError(triangleHeightInputFieldValue);
+    handleInputError(triangleHeightInputFieldValue);
 
     // Calculate Area(A) : 0.5 * b * h
     const area = 0.5 * triangleBaseInputFieldValue * triangleHeightInputFieldValue;
 
-    const areaCalculation = document.getElementById("area-calculation");
-
-    const serial = 1;
-    const triangleTitle = document.getElementById("triangle-title").innerText;
-
-    const button = document.createElement("button");
-    button.setAttribute("type", "button");
-    button.innerHTML = "Convert to m<sup>2</sup>";
-    button.setAttribute("id", "btn-area-calculate");
-    button.setAttribute("class", "btn btn-primary");
-
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-        <td>${serial}</td>
-        <td>${triangleTitle}</td>
-        <td>${area}cm<sup>2</sup></td>
-    `
-    tr.appendChild(button);
-    areaCalculation.appendChild(tr);
+    areaCalculationItem("triangle-title", area);
 
 })
 
@@ -46,25 +28,7 @@ document.getElementById("btn-rectangle").addEventListener("click", function(){
     // Calculate Area(A) : w * l
     const area = rectangleWidthInputFieldValue * rectangleLengthInputFieldValue;
 
-    const areaCalculation = document.getElementById("area-calculation");
-
-    const serial = 2;
-    const rectangleTitle = document.getElementById("rectangle-title").innerText;
-
-    const button = document.createElement("button");
-    button.setAttribute("type", "button");
-    button.innerHTML = "Convert to m<sup>2</sup>";
-    button.setAttribute("id", "btn-area-calculate");
-    button.setAttribute("class", "btn btn-primary");
-
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-        <td>${serial}</td>
-        <td>${rectangleTitle}</td>
-        <td>${area}cm<sup>2</sup></td>
-    `
-    tr.appendChild(button);
-    areaCalculation.appendChild(tr);
+    areaCalculationItem("rectangle-title", area);
 
 })
 
@@ -81,24 +45,56 @@ document.getElementById("btn-parallelogram").addEventListener("click", function(
     // Calculate Area(A) : b * h
     const area = parallelogramBaseInputFieldValue * parallelogramHeightInputFieldValue;
 
-    const areaCalculation = document.getElementById("area-calculation");
+    areaCalculationItem("parallelogram-title", area);
 
-    const serial = 3;
-    const parallelogramTitle = document.getElementById("parallelogram-title").innerText;
+})
 
-    const button = document.createElement("button");
-    button.setAttribute("type", "button");
-    button.innerHTML = "Convert to m<sup>2</sup>";
-    button.setAttribute("id", "btn-area-calculate");
-    button.setAttribute("class", "btn btn-primary");
+// Calculate Rhombus Area
+document.getElementById("btn-rhombus").addEventListener("click", function(){
+    //Get rhombus d1 input field value
+    const rhombusD1InputFieldValue = getInputFieldValueById("rhombus-d1-input-field");
+    // handleInputError(triangleBaseInputFieldValue);
 
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-        <td>${serial}</td>
-        <td>${parallelogramTitle}</td>
-        <td>${area}cm<sup>2</sup></td>
-    `
-    tr.appendChild(button);
-    areaCalculation.appendChild(tr);
+    // Get rhombus d2 input field value
+    const rhombusD2InputFieldValue = getInputFieldValueById("rhombus-d2-input-field");
+    // handleInputError(triangleHeightInputFieldValue);
+
+    // Calculate Area(A) : 0.5 * d1 * d2
+    const area = 0.5 * rhombusD1InputFieldValue * rhombusD2InputFieldValue;
+
+    areaCalculationItem("rhombus-title", area);
+
+})
+
+// Calculate Pentagon Area
+document.getElementById("btn-pentagon").addEventListener("click", function(){
+    //Get pentagon perimeter input field value
+    const pentagonPerimeterInputFieldValue = getInputFieldValueById("pentagon-perimeter-input-field");
+    // handleInputError(triangleBaseInputFieldValue);
+
+    // Get pentagon base input field value
+    const pentagonBaseInputFieldValue = getInputFieldValueById("pentagon-base-input-field");
+    // handleInputError(triangleHeightInputFieldValue);
+
+    // Calculate Area(A) : 0.5 * p * b
+    const area = 0.5 * pentagonPerimeterInputFieldValue * pentagonBaseInputFieldValue;
+
+    areaCalculationItem("pentagon-title", area);
+
+})
+
+document.getElementById("btn-ellipse").addEventListener("click", function(){
+    //Get ellipse a axis input field value
+    const ellipseAAxisInputFieldValue = getInputFieldValueById("ellipse-a-axis-input-field");
+    // handleInputError(triangleBaseInputFieldValue);
+
+    // Get ellipse b axis input field value
+    const ellipseBAxisInputFieldValue = getInputFieldValueById("ellipse-b-axis-input-field");
+    // handleInputError(triangleHeightInputFieldValue);
+
+    // Calculate Area(A) : 3.14 * a * b
+    const area = 3.14 * ellipseAAxisInputFieldValue * ellipseBAxisInputFieldValue;
+
+    areaCalculationItem("ellipse-title", area);
 
 })

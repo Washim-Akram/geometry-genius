@@ -22,7 +22,6 @@ for(const card of cardList) {
   });
 }
 
-
 function getInputFieldValueById(inputFieldId) {
     const inputField = document.getElementById(inputFieldId);
     const inputFieldString = inputField.value;
@@ -31,27 +30,35 @@ function getInputFieldValueById(inputFieldId) {
     return inputFieldValue;
 }
 
-// function getTextFieldValueById(textFieldId) {
-//     const textField = document.getElementById(textFieldId);
-//     const textFieldString = textField.innerText;
-//     const textFieldValue = parseFloat(textFieldString);
-//     return textFieldValue;
-// }
+function handleInputError(inputFieldValue) {
+  if( typeof inputFieldValue !== "number"){
+      window.alert("Please Enter Only Number.");
+      return;
+  }else if(inputFieldValue === "") {
+      window.alert("please Enter Only Number.")
+      return;
+  } else if(inputFieldValue < 0) {
+      window.alert("Please Enter Only Positive Number.")
+      return;
+  }
+}
 
-// function setTextFieldValueById(textFieldId, value) {
-//     const textField = document.getElementById(textFieldId);
-//     textField.innerText = value;
-// }
+function areaCalculationItem(title, area) {
+  const areaCalculation = document.getElementById("area-calculation");
 
-// function handleInputError(inputFieldValue) {
-//     if( typeof inputFieldValue !== "number"){
-//         window.alert("Please Enter Only Number.");
-//         return;
-//     }else if(inputFieldValue === "") {
-//         window.alert("please Enter Only Number.")
-//         return;
-//     } else if(inputFieldValue < 0) {
-//         window.alert("Please Enter Only Positive Number.")
-//         return;
-//     }
-// }
+    const titleText = document.getElementById(title).innerText;
+
+    const button = document.createElement("button");
+    button.setAttribute("type", "button");
+    button.innerHTML = "Convert to m<sup>2</sup>";
+    button.setAttribute("class", "btn btn-primary");
+
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+
+        <td>${titleText}</td>
+        <td>${area}cm<sup>2</sup></td>
+    `
+    tr.appendChild(button);
+    areaCalculation.appendChild(tr);
+}

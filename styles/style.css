@@ -1,4 +1,14 @@
+body {
+  counter-reset: Serial;
+}
+
 table tr td {
   padding-right: 10px;
   font-weight: 500;
+}
+
+tr td:first-child:before {
+  padding-right: 10px;
+  counter-increment: Serial;
+  content: counter(Serial) ".";
 }

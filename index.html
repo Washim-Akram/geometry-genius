@@ -173,26 +173,32 @@
                   alt="Rhombus"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Rhombus</h5>
-                  <p class="card-text">Area(A) = 0.5 X b X h</p>
+                  <h5 id="rhombus-title" class="card-title">Rhombus</h5>
+                  <p class="card-text">
+                    Area(A) = 0.5 X d<sub>1</sub> X d<sub>2</sub>
+                  </p>
                   <input
                     class="w-25 bg-body-tertiary rounded px-2"
                     type="text"
                     name=""
-                    id=""
-                    placeholder="b"
+                    id="rhombus-d1-input-field"
+                    placeholder="d1"
                   />
                   <span> cm </span>
                   <input
                     class="w-25 bg-body-tertiary rounded px-2 ms-2"
                     type="text"
                     name=""
-                    id=""
-                    placeholder="h"
+                    id="rhombus-d2-input-field"
+                    placeholder="d2"
                   />
                   <span>cm</span>
                 </div>
-                <button class="btn btn-lg btn-primary" type="button">
+                <button
+                  id="btn-rhombus"
+                  class="btn btn-lg btn-primary"
+                  type="button"
+                >
                   Calculate
                 </button>
               </div>
@@ -205,26 +211,26 @@
                   alt="triangle"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Pentagon</h5>
-                  <p class="card-text">Area(A) = 0.5 X b X h</p>
+                  <h5 id="pentagon-title" class="card-title">Pentagon</h5>
+                  <p class="card-text">Area(A) = 0.5 X p X b</p>
                   <input
                     class="w-25 bg-body-tertiary rounded px-2"
                     type="text"
                     name=""
-                    id=""
-                    placeholder="b"
+                    id="pentagon-perimeter-input-field"
+                    placeholder="p"
                   />
                   <span> cm </span>
                   <input
                     class="w-25 bg-body-tertiary rounded px-2 ms-2"
                     type="text"
                     name=""
-                    id=""
-                    placeholder="h"
+                    id="pentagon-base-input-field"
+                    placeholder="b"
                   />
                   <span>cm</span>
                 </div>
-                <button class="btn btn-lg btn-primary" type="button">
+                <button id="btn-pentagon" class="btn btn-lg btn-primary" type="button">
                   Calculate
                 </button>
               </div>
@@ -237,26 +243,26 @@
                   alt="Ellipse"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Ellipse</h5>
-                  <p class="card-text">Area(A) = 0.5 X b X h</p>
+                  <h5 id="ellipse-title" class="card-title">Ellipse</h5>
+                  <p class="card-text">Area(A) = &#8508ab</p>
                   <input
                     class="w-25 bg-body-tertiary rounded px-2"
                     type="text"
                     name=""
-                    id=""
-                    placeholder="b"
+                    id="ellipse-a-axis-input-field"
+                    placeholder="a"
                   />
                   <span> cm </span>
                   <input
                     class="w-25 bg-body-tertiary rounded px-2 ms-2"
                     type="text"
                     name=""
-                    id=""
-                    placeholder="h"
+                    id="ellipse-b-axis-input-field"
+                    placeholder="b"
                   />
                   <span>cm</span>
                 </div>
-                <button class="btn btn-lg btn-primary" type="button">
+                <button id="btn-ellipse" class="btn btn-lg btn-primary" type="button">
                   Calculate
                 </button>
               </div>
