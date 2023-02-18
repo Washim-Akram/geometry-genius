@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog-Geometry Genius</title>
+    <!-- BOOTSTRAP CSS CDN LINK -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- EXTERNAL CSS LINK -->
+    <link rel="stylesheet" href="styles/blog.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <!-- Navigation Bar(Navbar) -->
+        <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"
+              ><span class="fw-bold fs-2">Interactive</span> <br />Geometry
+              Genius</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarTogglerDemo02"
+              aria-controls="navbarTogglerDemo02"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <button class="btn btn-lg btn-primary ms-auto px-4" type="button">
+                Back to Home
+              </button>
+            </div>
+          </div>
+        </nav>
+        <!-- Blogs Title -->
+        <h1 class="display-2 my-5 text-center">
+          Welcome to the
+          <span class="fw-medium text-danger">"Interactive"</span>
+          Blogs !!
+        </h1>
+      </div>
+    </header>
+
+    <!-- Main Section Start -->
+    <main class="container my-5 p-5" style="background-color: whitesmoke">
+      <div class="row row-cols-1 row-cols-md-2 g-5">
+        <div class="col">
+          <article>
+            <h2 class="fw-medium">What is DOM? Purpose of DOM ?</h2>
+            <hr />
+            <p class="lead" style="text-align: justify">
+              DOM Stands for Document Object Model. In javaScript everything
+              considered as an objects.In HTML, Layout of website called a
+              Document. When a Document is loaded in a web browser, JavaScript
+              converts the document into an object.
+              <br />
+              The purpose of DOM is that access all the html elements. Create,
+              Read, Update, Delete html elements from the document object.Using
+              the DOM, we can change the whole html document.
+            </p>
+          </article>
+        </div>
+        <div class="col">
+          <article>
+            <h2 class="fw-medium">How to select element from DOM?</h2>
+            <hr />
+            <p class="lead" style="text-align: justify">
+              There are many ways to select element from DOM. They are called
+              Method. These methods are self explanatory. Mostly used/familiar
+              methods are:
+            </p>
+            <ol>
+              <li>
+                getElementsByTagName(): Get elements from DOM by tag name.
+              </li>
+              <li>getElementById(): Get an element from DOM by an Id.</li>
+              <li>
+                getElementsByClassName(): Get elements from DOM by class name.
+              </li>
+              <li>
+                querySelector(): Get the first element from the DOM by CSS
+                Selector.
+              </li>
+              <li>
+                querySelectorAll(): Get all elements from the DOM by CSS
+                Selector.
+              </li>
+            </ol>
+          </article>
+        </div>
+        <div class="col">
+          <article>
+            <h2 class="fw-medium">What is event bubble in DOM?</h2>
+            <hr />
+            <p class="lead" style="text-align: justify">
+              When an event occurs in HTML DOM, in bubbling the trigger first
+              reached its last element event. After that it go to the its
+              upward/parent event continuously. In addEventListener(), event
+              bubble is enabled by default.
+            </p>
+          </article>
+        </div>
+        <div class="col">
+          <article>
+            <h2 class="fw-medium">
+              What is callback function in JS? Purpose of callback function in
+              JS.
+            </h2>
+            <hr />
+            <p class="lead" style="text-align: justify">
+              In JavaScript, when a function pass as a parameter into another
+              function, thats called the callback function. <br />
+              When we want to execute a function after, complete execution of
+              another function, we use callback function.
+            </p>
+          </article>
+        </div>
+      </div>
+    </main>
+    <!-- BOOTSTRAP JS CDN LINK -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
