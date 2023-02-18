@@ -30,19 +30,6 @@ function getInputFieldValueById(inputFieldId) {
     return inputFieldValue;
 }
 
-function handleInputError(inputFieldValue) {
-  if( typeof inputFieldValue !== "number"){
-      window.alert("Please Enter Only Number.");
-      return;
-  }else if(inputFieldValue === "") {
-      window.alert("please Enter Only Number.")
-      return;
-  } else if(inputFieldValue < 0) {
-      window.alert("Please Enter Only Positive Number.")
-      return;
-  }
-}
-
 function areaCalculationItem(title, area) {
   const areaCalculation = document.getElementById("area-calculation");
 
