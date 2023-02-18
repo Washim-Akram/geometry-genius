@@ -52,7 +52,7 @@
 
     <!-- Main Section Start -->
     <main class="my-5">
-      <div class="container d-flex gap-4">
+      <div class="container d-flex flex-column flex-md-row gap-4">
         <div>
           <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
@@ -69,7 +69,7 @@
                     class="w-25 bg-body-tertiary rounded px-2"
                     type="text"
                     name=""
-                    id=""
+                    id="triangle-base-input-field"
                     placeholder="b"
                   />
                   <span> cm </span>
@@ -77,12 +77,16 @@
                     class="w-25 bg-body-tertiary rounded px-2 ms-2"
                     type="text"
                     name=""
-                    id=""
+                    id="triangle-height-input-field"
                     placeholder="h"
                   />
                   <span>cm</span>
                 </div>
-                <button class="btn btn-lg btn-primary" type="button">
+                <button
+                  id="btn-triangle"
+                  class="btn btn-lg btn-primary"
+                  type="button"
+                >
                   Calculate
                 </button>
               </div>
@@ -249,37 +253,18 @@
             </div>
           </div>
         </div>
+
         <div>
           <div class="col">
             <div class="card h-100 text-center py-4 px-4">
-              <img
-                src="images/triangle.png"
-                class="card-img-top w-75 mx-auto"
-                alt="triangle"
-              />
               <div class="card-body">
-                <h5 class="card-title">Triangle</h5>
-                <p class="card-text">Area(A) = 0.5 X b X h</p>
-                <input
-                  class="w-25 bg-body-tertiary rounded px-2"
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="b"
-                />
-                <span> cm </span>
-                <input
-                  class="w-25 bg-body-tertiary rounded px-2 ms-2"
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="h"
-                />
-                <span>cm</span>
+                <h5 class="card-title text-decoration-underline">
+                  Area Calculation
+                </h5>
+                <h6>
+                  <span id="area-calculation-text-field"></span> cm<sup>2</sup>
+                </h6>
               </div>
-              <button class="btn btn-lg btn-primary" type="button">
-                Calculate
-              </button>
             </div>
           </div>
         </div>
